@@ -1,0 +1,856 @@
+/* ==========================================================================
+   IFAM BÉNIN — LANDING PAGES LAYOUT (HERO PLAN D'OUVERTURE & SECTIONS)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO : PLAN D'OUVERTURE ÉDITORIAL & CINÉMATOGRAPHIQUE
+   -------------------------------------------------------------------------- */
+.hero-section {
+  padding-top: calc(var(--space-16) + 40px);
+  padding-bottom: var(--space-12);
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 90% 10%, rgba(228, 0, 124, 0.04) 0%, transparent 60%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.hero-grid:has(> :only-child),
+.hero-grid.is-solo {
+  grid-template-columns: 1fr;
+  max-width: 980px;
+}
+
+.hero-grid:has(> :only-child) .hero-desc,
+.hero-grid.is-solo .hero-desc {
+  max-width: 820px;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+}
+
+.hero-grid:has(> :only-child) .hero-title,
+.hero-grid.is-solo .hero-title {
+  max-width: 960px;
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    padding-top: calc(var(--space-10) + 50px);
+    padding-bottom: var(--space-8);
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-badge-filiere {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifam-fuchsia);
+  background-color: var(--ifam-fuchsia-subtle);
+  border: 1px solid rgba(228, 0, 124, 0.18);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-5);
+  font-weight: 700;
+}
+
+.hero-title {
+  font-size: clamp(2.35rem, 4.5vw, 3.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-5);
+}
+
+.hero-title .text-accent-serif {
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.hero-desc {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--ifam-texte-secondaire);
+  margin-bottom: var(--space-6);
+  max-width: 580px;
+}
+
+/* Repères Officiels (Pillules compactes) */
+.hero-reperes-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+}
+
+/* Hero centré occupant l'écran sans image à droite */
+.hero-centered {
+  text-align: center;
+  max-width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-centered .hero-badge-filiere {
+  margin: 0 auto var(--space-5);
+}
+
+.hero-centered .hero-title {
+  font-size: clamp(3rem, 6.2vw, 4.6rem);
+  line-height: 1.1;
+  margin: 0 auto var(--space-5);
+  max-width: 980px;
+  text-align: center;
+}
+
+.hero-centered .hero-title .text-accent-serif {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.hero-centered .hero-desc {
+  font-size: clamp(1.15rem, 2.1vw, 1.4rem);
+  line-height: 1.65;
+  color: var(--ifam-texte-secondaire);
+  max-width: 820px;
+  margin: 0 auto var(--space-8);
+  text-align: center;
+}
+
+.hero-centered .hero-actions-group {
+  justify-content: center;
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hero-centered .hero-reperes-bar {
+  justify-content: center;
+}
+
+/* Hero Pleine Largeur (Occupe tout l'espace sans vide à droite) */
+.hero-full-wrap {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-full-wrap .hero-title {
+  max-width: 1060px;
+  font-size: clamp(2.9rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: var(--space-5);
+}
+
+.hero-full-wrap .hero-desc {
+  max-width: 920px;
+  font-size: clamp(1.15rem, 2.1vw, 1.4rem);
+  line-height: 1.6;
+  margin-bottom: var(--space-7);
+}
+
+.hero-full-wrap .hero-actions-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* Grille de miniatures photos des étudiants en atelier */
+.miniatures-etudiants-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .miniatures-etudiants-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.miniature-etudiant-item {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(14, 14, 22, 0.08);
+  border: 1px solid var(--ifam-gris-bordure);
+  aspect-ratio: 4/3;
+  position: relative;
+  background: #EAEAEF;
+}
+
+.miniature-etudiant-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-couture);
+}
+
+.miniature-etudiant-item:hover img {
+  transform: scale(1.06);
+}
+
+.section-pratique-miniatures {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.repere-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: var(--ifam-blanc-soie);
+  border: 1px solid var(--ifam-gris-bordure);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ifam-texte-principal);
+}
+
+.repere-tag svg {
+  width: 16px;
+  height: 16px;
+  color: var(--ifam-fuchsia);
+}
+
+.repere-tag.highlight {
+  background-color: rgba(255, 199, 44, 0.15);
+  border-color: rgba(255, 199, 44, 0.4);
+}
+
+.repere-tag.highlight svg {
+  color: var(--ifam-jaune-accent);
+}
+
+/* Actions Hero */
+.hero-actions-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.hero-secondary-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ifam-texte-secondaire);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+}
+
+.hero-secondary-link:hover {
+  color: var(--ifam-fuchsia);
+}
+
+/* Image Hero Haute Couture */
+.hero-media-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image-frame {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  background-color: var(--ifam-blanc-creme);
+  border: 1px solid var(--ifam-gris-bordure);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/5;
+}
+
+@media (max-width: 992px) {
+  .hero-image-frame {
+    aspect-ratio: 16/10;
+  }
+}
+
+.hero-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-couture);
+}
+
+.hero-floating-card {
+  position: absolute;
+  bottom: var(--space-4);
+  left: var(--space-4);
+  right: var(--space-4);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 24px rgba(14, 14, 18, 0.08);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.hero-floating-card-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--ifam-fuchsia);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-floating-card-text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ifam-texte-principal);
+}
+
+.hero-floating-card-sub {
+  font-size: 0.75rem;
+  color: var(--ifam-texte-mute);
+}
+
+/* --------------------------------------------------------------------------
+   2. BANDEAU DE CRÉDIBILITÉ INSTITUTIONNELLE
+   -------------------------------------------------------------------------- */
+.credibility-strip {
+  background-color: var(--ifam-blanc-soie);
+  border-top: 1px solid var(--ifam-gris-bordure);
+  border-bottom: 1px solid var(--ifam-gris-bordure);
+  padding: var(--space-6) 0;
+}
+
+.credibility-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .credibility-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 540px) {
+  .credibility-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.credibility-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+@media (max-width: 540px) {
+  .credibility-item {
+    justify-content: center;
+  }
+}
+
+.credibility-icon {
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid var(--ifam-gris-bordure);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifam-fuchsia);
+  flex-shrink: 0;
+}
+
+.credibility-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--ifam-texte-principal);
+}
+
+.credibility-sub {
+  font-size: 0.8125rem;
+  color: var(--ifam-texte-mute);
+}
+
+/* --------------------------------------------------------------------------
+   1.1 HERO IMMERSIF AVEC ÉTUDIANT COUSANT EN ARRIÈRE-PLAN
+   -------------------------------------------------------------------------- */
+.hero-landing-immersive {
+  position: relative;
+  background-color: #0B0B12;
+  color: #FFFFFF;
+  padding: clamp(3.5rem, 7vw, 6rem) 0 clamp(4rem, 8vw, 6.5rem);
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-landing-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.38;
+  filter: saturate(1.15) contrast(1.1);
+  transform: scale(1.02);
+  transition: transform 12s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-landing-immersive:hover .hero-landing-bg {
+  transform: scale(1.06);
+}
+
+.hero-landing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    rgba(11, 11, 18, 0.78) 0%, 
+    rgba(11, 11, 18, 0.86) 55%, 
+    rgba(11, 11, 18, 0.98) 100%);
+  pointer-events: none;
+}
+
+.hero-landing-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(300px, 60vw, 750px);
+  height: clamp(300px, 60vw, 750px);
+  background: radial-gradient(circle, rgba(228, 0, 124, 0.22) 0%, transparent 68%);
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.hero-landing-content {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero-landing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFD200;
+  background: rgba(255, 210, 0, 0.12);
+  border: 1px solid rgba(255, 210, 0, 0.32);
+  padding: 0.45rem 1.25rem;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-5);
+  font-weight: 700;
+}
+
+.hero-landing-title {
+  font-size: clamp(2.4rem, 5.8vw, 4.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: var(--space-5);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.hero-landing-title .text-accent-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  display: block;
+  margin-top: 0.25rem;
+  background: linear-gradient(135deg, #FF7AB8 0%, #E4007C 55%, #FFA3CE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-landing-desc {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: #E2E2EA;
+  line-height: 1.65;
+  max-width: 740px;
+  margin: 0 auto var(--space-8);
+}
+
+.hero-landing-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-8);
+}
+
+.btn-landing-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
+  backdrop-filter: blur(8px);
+  padding: 1rem 1.8rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-landing-secondary:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.hero-landing-reperes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-landing-repere-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  color: #D6D6E2;
+}
+
+.hero-landing-repere-tag svg {
+  color: var(--ifam-fuchsia);
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. SECTION APPRENDRE EN PRATIQUANT (VISUEL ÉTUDIANTS T-SHIRT BLANC)
+   -------------------------------------------------------------------------- */
+.pratique-section-clean {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .pratique-section-clean {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+.pratique-content-clean {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.pratique-clean-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ifam-texte-principal);
+}
+
+.pratique-clean-desc {
+  font-size: 1.05rem;
+  color: var(--ifam-texte-secondaire);
+  line-height: 1.65;
+  margin-bottom: var(--space-1);
+}
+
+.pratique-clean-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.pratique-clean-bullet {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ifam-texte-principal);
+  background: var(--ifam-blanc-soie);
+  border: 1px solid var(--ifam-gris-bordure);
+  padding: 0.7rem 1.1rem;
+  border-radius: var(--radius-md);
+}
+
+.pratique-clean-bullet svg {
+  color: var(--ifam-fuchsia);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.pratique-visuals-showcase {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+@media (max-width: 600px) {
+  .pratique-visuals-showcase {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pratique-card-main {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(14, 14, 22, 0.1);
+  border: 1px solid var(--ifam-gris-bordure);
+  background: #EAEAEF;
+  min-height: 380px;
+}
+
+.pratique-card-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-couture);
+}
+
+.pratique-card-main:hover img {
+  transform: scale(1.04);
+}
+
+.pratique-card-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.pratique-card-sub {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(14, 14, 22, 0.08);
+  border: 1px solid var(--ifam-gris-bordure);
+  background: #EAEAEF;
+  flex: 1;
+  min-height: 180px;
+}
+
+.pratique-card-sub img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-couture);
+}
+
+.pratique-card-sub:hover img {
+  transform: scale(1.04);
+}
+
+.pratique-card-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(14, 14, 22, 0.82);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+}
+
+/* Ancienne structure conservée pour rétrocompatibilité */
+.pratique-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.pratique-mosaic {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--space-4);
+}
+
+.mosaic-img-box {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--ifam-gris-bordure);
+}
+
+.mosaic-img-box.tall {
+  grid-row: span 2;
+}
+
+.mosaic-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pratique-feature-box {
+  background: var(--ifam-blanc-creme);
+  border-left: 4px solid var(--ifam-fuchsia);
+  padding: var(--space-4) var(--space-5);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-top: var(--space-5);
+}
+
+.pratique-feature-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+/* --------------------------------------------------------------------------
+   4. SECTION DES 8 CAMPUS IFAM
+   -------------------------------------------------------------------------- */
+.campus-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-8);
+  align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+  .campus-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+.campus-sidebar {
+  background: var(--ifam-blanc-soie);
+  border: 1px solid var(--ifam-gris-bordure);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.campus-sidebar-title {
+  font-size: 1.35rem;
+  margin-bottom: var(--space-3);
+}
+
+.campus-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.campus-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: #FFFFFF;
+  border: 1px solid var(--ifam-gris-bordure);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  color: var(--ifam-texte-principal);
+}
+
+/* --------------------------------------------------------------------------
+   5. CARTE DE CONVERSION FINALE (PRE-FOOTER)
+   -------------------------------------------------------------------------- */
+.cta-banner-card {
+  background: linear-gradient(135deg, var(--ifam-noir) 0%, #1A1A22 100%);
+  color: #FFFFFF;
+  border-radius: var(--radius-2xl);
+  padding: var(--space-10) var(--space-6);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-top: var(--space-12);
+}
+
+.cta-banner-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cta-banner-badge {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--ifam-jaune-ruban);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-3);
+  display: inline-block;
+}
+
+.cta-banner-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  color: #FFFFFF;
+  margin-bottom: var(--space-4);
+  line-height: 1.2;
+}
+
+.cta-banner-desc {
+  font-size: 1.1rem;
+  color: var(--ifam-texte-inv-sec);
+  margin: 0 auto var(--space-6);
+}

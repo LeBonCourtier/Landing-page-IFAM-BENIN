@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formation Modélisme | IFAM BÉNIN | Du patron au vêtement</title>
+  <meta name="description" content="Formation technique intensive en Modélisme à IFAM BÉNIN. 1 an de pratique en atelier. Coupe homme et dame, patronnage et confection. Diplôme reconnu par l'État. Rentrée le 26 octobre 2026.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Formation Modélisme | IFAM BÉNIN">
+  <meta property="og:description" content="Apprenez la conception technique, le patronage, la coupe et la réalisation de vêtements dans les ateliers IFAM BÉNIN.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon officiel -->
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo-ifam-officiel.jpg">
+
+  <!-- Typographie Haute Couture Google Fonts (Préchargement haute performance) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Space+Mono:wght@400;700&display=swap">
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/landing.css?v=4">
+
+  <!-- GSAP 3 & ScrollTrigger via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="../js/animations.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Overlay Grain Haute Couture FeTurbulence (Discret, pointer-events: none) -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       01. NAVIGATION FLOTTANTE « ÎLE FLOTTANTE »
+       ========================================================================= -->
+  <header class="navbar-floating-wrapper" id="topNav">
+    <nav class="navbar-pill" aria-label="Navigation principale">
+      <a href="../index.html" class="nav-brand" aria-label="Accueil IFAM BÉNIN">
+        <div class="nav-logo-box">
+          <img src="../assets/images/logo-ifam-officiel.jpg" alt="Logo officiel IFAM BÉNIN" class="nav-logo-img">
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Accueil</a></li>
+        <li><a href="#formation" class="nav-link">Formation</a></li>
+        <li><a href="#realisations" class="nav-link">Réalisations</a></li>
+        <li><a href="#offres" class="nav-link">Offres</a></li>
+        <li><a href="#centres" class="nav-link">Centres</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#offres" class="btn btn-outline btn-sm" aria-label="Voir les offres de formation">
+          <span class="btn-text">Nos offres</span>
+        </a>
+        <button class="mobile-toggle" id="mobileNavToggle" aria-expanded="false" aria-label="Ouvrir le menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Menu Mobile Déroulant -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <a href="../index.html" class="mobile-nav-link">Accueil</a>
+    <a href="#formation" class="mobile-nav-link">Formation</a>
+    <a href="#realisations" class="mobile-nav-link">Réalisations</a>
+    <a href="#offres" class="mobile-nav-link">Offres</a>
+    <a href="#centres" class="mobile-nav-link">Centres</a>
+    <a href="#faq" class="mobile-nav-link">FAQ</a>
+    <a href="../stylisme-modelisme/index.html" class="mobile-nav-link" style="color: var(--ifam-fuchsia); font-weight: 600;">Découvrir Stylisme & Modélisme (2 ans) →</a>
+    <a href="#offres" class="btn btn-primary" style="margin-top: var(--space-4);">
+      <span class="btn-text">Découvrir les offres d'inscription</span>
+    </a>
+  </div>
+
+  <!-- Bouton Flottant WhatsApp Officiel Vert (Accessible en bas d'écran sur tous les appareils) -->
+  <aside class="whatsapp-float-container" aria-label="Contact direct WhatsApp">
+    <div class="whatsapp-float-tooltip">Discuter avec une secrétaire</div>
+    <a href="https://wa.me/2290191553030?text=Bonjour%20IFAM%20B%C3%89NIN%2C%20je%20souhaite%20me%20renseigner%20sur%20la%20formation%20en%20Mod%C3%A9lisme." 
+       class="whatsapp-float-btn" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Discuter avec une secrétaire sur WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2M12.05 3.67C16.58 3.67 20.28 7.37 20.28 11.92C20.28 16.46 16.58 20.17 12.04 20.17C10.53 20.17 9.07 19.76 7.8 19L7.49 18.82L4.38 19.64L5.21 16.61L5.02 16.3C4.19 14.98 3.75 13.46 3.75 11.91C3.75 7.37 7.46 3.67 12.05 3.67Z"/>
+      </svg>
+    </a>
+  </aside>
+
+  <!-- =========================================================================
+       02. PREMIER ÉCRAN (HERO HAUTE COUTURE ÉPURÉ & STATUTAIRE)
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-centered">
+        <h1 class="hero-title hero-anim-item">
+          Du patron au vêtement.
+          <span class="text-accent-serif">Développez votre savoir-faire.</span>
+        </h1>
+
+        <p class="hero-desc hero-anim-item">
+          Maîtrisez le patronage de précision, la coupe et la confection de vêtements dans les ateliers de IFAM BÉNIN.
+        </p>
+
+        <div class="hero-actions-group hero-anim-item">
+          <a href="https://wa.me/2290191553030?text=Bonjour%20IFAM%20B%C3%89NIN%2C%20je%20souhaite%20des%20informations%20sur%20la%20formation%20en%20Mod%C3%A9lisme." 
+             class="btn btn-whatsapp btn-lg" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Échanger sur WhatsApp pour la formation Modélisme">
+            <span class="btn-text">
+              <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor;" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2M12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.04 3.67C16.58 3.67 20.28 7.37 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15M16.56 14.39C16.31 14.27 15.09 13.67 14.86 13.58C14.63 13.5 14.47 13.46 14.3 13.7C14.14 13.95 13.67 14.5 13.53 14.66C13.38 14.83 13.24 14.85 12.99 14.73C12.74 14.6 11.94 14.34 11 13.5C10.26 12.84 9.77 12.03 9.62 11.78C9.48 11.53 9.61 11.4 9.73 11.28C9.84 11.17 9.98 10.99 10.1 10.85C10.22 10.71 10.27 10.6 10.35 10.44C10.43 10.27 10.39 10.13 10.33 10.01C10.27 9.88 9.77 8.67 9.57 8.16C9.37 7.68 9.16 7.74 9.01 7.74C8.87 7.73 8.7 7.73 8.54 7.73C8.38 7.73 8.11 7.79 7.89 8.03C7.66 8.27 7.03 8.86 7.03 10.06C7.03 11.27 7.91 12.43 8.03 12.59C8.16 12.76 9.77 15.24 12.24 16.31C12.83 16.56 13.28 16.71 13.64 16.83C14.23 17.02 14.77 16.99 15.2 16.93C15.68 16.86 16.68 16.32 16.89 15.74C17.09 15.15 17.09 14.65 17.03 14.54C16.97 14.44 16.81 14.39 16.56 14.27Z"/></svg>
+              Échanger sur WhatsApp
+            </span>
+          </a>
+          <a href="#formation" class="hero-secondary-link">
+            Découvrir les compétences ↓
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       03. À QUI S’ADRESSE LA FORMATION ?
+       ========================================================================= -->
+  <section class="section" id="profils">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Public concerné</span>
+        <h2 class="section-title">Une formation technique ouverte à tous les profils</h2>
+        <p class="section-desc">Le modélisme est l’art de concevoir l'architecture d'un vêtement. Nos ateliers accueillent chaque profil avec un suivi rigoureux.</p>
+      </div>
+
+      <div class="profils-grid">
+        <!-- Carte 1 -->
+        <article class="card-profil">
+          <div class="card-profil-header" role="button" tabindex="0" aria-expanded="false">
+            <div>
+              <span class="profil-role-tag">Débutants & Reconversion</span>
+              <h3 class="profil-title">Apprendre les bases</h3>
+              <p class="profil-summary">Commencer et apprendre les bases du patronnage et de la coupe sans prérequis.</p>
+            </div>
+            <div class="profil-toggle-btn" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+          <div class="card-profil-body">
+            <ul class="profil-details-list">
+              <li>Vous n’avez jamais tenu de ciseaux de tailleur ni utilisé de mètre ruban ? La formation vous enseigne la lecture des mesures corporelles et le tracé des lignes directrices sur papier kraft.</li>
+              <li>L'enfilage, le réglage et le guidage de la machine à coudre sont abordés pas à pas dans une ambiance d'atelier bienveillante.</li>
+              <li>Une voie concrète et rapide pour maîtriser un métier manuel recherché en un an.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Carte 2 -->
+        <article class="card-profil">
+          <div class="card-profil-header" role="button" tabindex="0" aria-expanded="false">
+            <div>
+              <span class="profil-role-tag">Autodidactes & Praticiens</span>
+              <h3 class="profil-title">Structurer sa méthode</h3>
+              <p class="profil-summary">En finir avec le hasard et maîtriser l'ajustement sans retouches interminables.</p>
+            </div>
+            <div class="profil-toggle-btn" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+          <div class="card-profil-body">
+            <ul class="profil-details-list">
+              <li>Vous confectionnez déjà des pièces mais vous manquez d'une méthode de coupe reproductible et précise ?</li>
+              <li>Vous apprenez les règles géométriques du patronage à plat, le pivotement des pinces et la gestion rigoureuse des valeurs de couture.</li>
+              <li>Vous gagnez un temps précieux sur chaque montage et obtenez un tombé de vêtement régulier et professionnel.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Carte 3 -->
+        <article class="card-profil">
+          <div class="card-profil-header" role="button" tabindex="0" aria-expanded="false">
+            <div>
+              <span class="profil-role-tag">Couturiers & Porteurs d’atelier</span>
+              <h3 class="profil-title">Approfondir & Développer</h3>
+              <p class="profil-summary">Discuter des compétences à approfondir et développer sa pratique technique.</p>
+            </div>
+            <div class="profil-toggle-btn" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+          <div class="card-profil-body">
+            <ul class="profil-details-list">
+              <li>Vous dirigez déjà un atelier ? Élargissez votre savoir-faire en maîtrisant les deux vestiaires complets : Homme et Dames.</li>
+              <li>Apprenez la gradation industrielle pour décliner un modèle dans toutes les tailles sans déformer les lignes de base.</li>
+              <li><em>Pour les couturiers en exercice : un entretien d'orientation préalable avec notre équipe permet d'analyser vos compétences et d'ajuster votre apprentissage.</em></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       04. CE QUE VOUS ALLEZ APPRENDRE
+       ========================================================================= -->
+  <section class="section" id="formation" style="background-color: var(--ifam-blanc-creme);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Compétences Métiers</span>
+        <h2 class="section-title">Les compétences enseignées à IFAM BÉNIN</h2>
+        <p class="section-desc">Un apprentissage pratique structuré autour des piliers essentiels du modélisme et de la confection professionnelle.</p>
+      </div>
+
+      <div class="competences-grid">
+        <!-- Compétence 1 : Couture Homme -->
+        <div class="card-competence">
+          <span class="competence-number">COMPÉTENCE 01</span>
+          <h3 class="competence-title">Couture Homme</h3>
+          <ul class="competence-list">
+            <li>Confection de vestiaires masculins complets : chemises classiques, tuniques modernes, pantalons et ensembles traditionnels.</li>
+            <li>Maîtrise de la prise de mesures, des aplombs et des lignes de carrure masculine.</li>
+            <li>Montage précis des cols rigides, pattes de boutonnage, poches passepoilées et finitions soignées.</li>
+          </ul>
+          <div class="competence-realisation-box">
+            <span class="competence-realisation-label">Réalisation concrète</span>
+            Des pièces masculines complètes, impeccablement coupées et ajustées aux exigences du sur-mesure.
+          </div>
+        </div>
+
+        <!-- Compétence 2 : Couture Dame -->
+        <div class="card-competence">
+          <span class="competence-number">COMPÉTENCE 02</span>
+          <h3 class="competence-title">Couture Dame</h3>
+          <ul class="competence-list">
+            <li>Maîtrise des techniques de coupe féminine : jupes droites, évasées, corsages, robes cintrées et vestes.</li>
+            <li>Gestion des pinces de poitrine et de taille, emmanchures, décolletés et drapés fluides.</li>
+            <li>Confection de tenues de cérémonie, d'apparat et de pièces de haute technicité.</li>
+          </ul>
+          <div class="competence-realisation-box">
+            <span class="competence-realisation-label">Réalisation concrète</span>
+            Des ensembles et robes de cérémonie aux tombés parfaits et finitions invisibles.
+          </div>
+        </div>
+
+        <!-- Compétence 3 : Dessin de Mode -->
+        <div class="card-competence">
+          <span class="competence-number">COMPÉTENCE 03</span>
+          <h3 class="competence-title">Dessin de Mode</h3>
+          <ul class="competence-list">
+            <li>Représentation de la silhouette stylisée et proportions anatomiques de mode.</li>
+            <li>Traduction visuelle des idées en croquis techniques exploitables à la table de coupe.</li>
+            <li>Rendu des matières, textures, volumes, plis et tombés d'étoffes.</li>
+          </ul>
+          <div class="competence-realisation-box">
+            <span class="competence-realisation-label">Réalisation concrète</span>
+            Des fiches techniques et croquis de création prêts pour l'élaboration du patron.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       05. APPRENDRE EN PRATIQUANT
+       ========================================================================= -->
+  <!-- =========================================================================
+       05. APPRENDRE EN PRATIQUANT (PÉDAGOGIE 100% ATELIER)
+       ========================================================================= -->
+  <section class="section section-pratique-miniatures" id="pratique" style="padding-top: var(--space-8); padding-bottom: var(--space-8);">
+    <div class="container">
+      <div class="miniatures-etudiants-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 1040px; margin: 0 auto;">
+        <div class="miniature-etudiant-item" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 16px rgba(14, 14, 22, 0.08); border: 1px solid var(--ifam-gris-bordure); aspect-ratio: 4/3; background: #EAEAEF;">
+          <img src="../assets/images/atelier-machine-apprenantes.jpeg"
+               alt="Étudiantes IFAM BÉNIN en atelier sur machines"
+               style="width: 100%; height: 100%; object-fit: cover; display: block;"
+               loading="lazy">
+        </div>
+        <div class="miniature-etudiant-item" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 16px rgba(14, 14, 22, 0.08); border: 1px solid var(--ifam-gris-bordure); aspect-ratio: 4/3; background: #EAEAEF;">
+          <img src="../assets/images/couture-machine-piquage.jpeg"
+               alt="Étudiante IFAM BÉNIN au piquage à la machine"
+               style="width: 100%; height: 100%; object-fit: cover; display: block;"
+               loading="lazy">
+        </div>
+        <div class="miniature-etudiant-item" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 16px rgba(14, 14, 22, 0.08); border: 1px solid var(--ifam-gris-bordure); aspect-ratio: 4/3; background: #EAEAEF;">
+          <img src="../assets/images/atelier-plusieurs-machines.jpeg"
+               alt="Atelier de couture aux machines IFAM BÉNIN"
+               style="width: 100%; height: 100%; object-fit: cover; display: block;"
+               loading="lazy">
+        </div>
+        <div class="miniature-etudiant-item" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 16px rgba(14, 14, 22, 0.08); border: 1px solid var(--ifam-gris-bordure); aspect-ratio: 4/3; background: #EAEAEF;">
+          <img src="../assets/images/atelier-table-coupe-groupe.jpeg"
+               alt="Étudiantes IFAM BÉNIN à la table de coupe"
+               style="width: 100%; height: 100%; object-fit: cover; display: block;"
+               loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       06. SECTION RÉALISATIONS (GALERIE ÉDITORIALE HAUTE PRÉCISION)
+       ========================================================================= -->
+  <section class="section" id="realisations" style="background-color: var(--ifam-blanc-soie);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Précision de coupe</span>
+        <h2 class="section-title">Quelques réalisations de nos étudiants</h2>
+        <p class="section-desc">Vêtements patronnés, coupés et assemblés avec rigueur dans les ateliers IFAM BÉNIN et présentés en soutenance officielle.</p>
+      </div>
+
+      <!-- Galerie principale : 4 tenues visibles au départ -->
+      <div class="gallery-editorial-grid" id="galleryMain">
+        <!-- Item 1 : Robe bustier noir sirène -->
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Agrandir : Corset technique noir et jupe sirène pagne">
+          <img src="../assets/images/creation-robe-bustier-noir-sirene.jpeg" alt="Corset technique noir structuré et jupe sirène en pagne réalisée à IFAM BÉNIN" class="gallery-card-img" width="600" height="800" loading="eager">
+          <div class="gallery-card-zoom-indicator">
+            <div class="gallery-zoom-badge" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 : Robe bleue volants noirs -->
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Agrandir : Robe sirène avec volants plissés noirs">
+          <img src="../assets/images/creation-robe-bleue-volants-noirs.jpeg" alt="Robe sirène coupe architecturale avec volants plissés noirs confectionnée à IFAM BÉNIN" class="gallery-card-img" width="600" height="800" loading="lazy">
+          <div class="gallery-card-zoom-indicator">
+            <div class="gallery-zoom-badge" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 : Robe fourreau licou bordeaux -->
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Agrandir : Robe fourreau découpe licou bordeaux">
+          <img src="../assets/images/creation-robe-licou-bordeaux.jpeg" alt="Robe fourreau ajustée avec découpe licou bordeaux réalisée à IFAM BÉNIN" class="gallery-card-img" width="600" height="800" loading="lazy">
+          <div class="gallery-card-zoom-indicator">
+            <div class="gallery-zoom-badge" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 : Robe chocolat perles -->
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Agrandir : Robe fourreau chocolat et broderie perles">
+          <img src="../assets/images/creation-robe-chocolat-perles.jpeg" alt="Robe fourreau chocolat avec drapé haute précision et broderies de perles réalisée à IFAM BÉNIN" class="gallery-card-img" width="600" height="800" loading="lazy">
+          <div class="gallery-card-zoom-indicator">
+            <div class="gallery-zoom-badge" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bouton déplier la galerie complémentaire -->
+      <div style="text-align:center; margin-top: var(--space-6);">
+        <button class="btn btn-outline" id="galleryToggleBtn" aria-expanded="false" aria-controls="galleryExtra">
+          <span class="btn-text" id="galleryBtnLabel">Voir plus de réalisations ↓</span>
+        </button>
+      </div>
+
+      <!-- Galerie complémentaire (masquée par défaut) -->
+      <div class="gallery-editorial-grid" id="galleryExtra" style="margin-top: var(--space-6); display:none;" aria-hidden="true">
+        <!-- Item 5 : Bustier bleu et jaune -->
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Agrandir : Bustier géométrique bleu et jaune">
+          <img src="../assets/images/creation-robe-bustier-bleu-jaune.jpeg" alt="Bustier structuré aux motifs géométriques confectionné en atelier IFAM BÉNIN" class="gallery-card-img" width="600" height="800" loading="lazy">
+          <div class="gallery-card-zoom-indicator">
+            <div class="gallery-zoom-badge" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 : Tenues coordonnées -->
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Agrandir : Ensemble tailleur coordonné">
+          <img src="../assets/images/realisation-tenues-coordonnees.jpeg" alt="Ensemble coordonné sur-mesure élaboré dans les ateliers IFAM BÉNIN" class="gallery-card-img" width="600" height="800" loading="lazy">
+          <div class="gallery-card-zoom-indicator">
+            <div class="gallery-zoom-badge" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 : Robe sirène perles -->
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Agrandir : Robe technique sirène avec perles">
+          <img src="../assets/images/soutenance-robe-sirene-perles.jpeg" alt="Robe technique sirène de soutenance à découpe complexe et perlage réalisée à IFAM BÉNIN" class="gallery-card-img" width="600" height="800" loading="lazy">
+          <div class="gallery-card-zoom-indicator">
+            <div class="gallery-zoom-badge" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 : Soutenance trio -->
+        <div class="gallery-card" tabindex="0" role="button" aria-label="Agrandir : Collection technique soutenance trio">
+          <img src="../assets/images/soutenance-haute-couture-trio.jpeg" alt="Ensemble de créations techniques coordonnées homme et dame présentées en jury IFAM" class="gallery-card-img" width="600" height="800" loading="lazy">
+          <div class="gallery-card-zoom-indicator">
+            <div class="gallery-zoom-badge" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       07. TÉMOIGNAGE AUTHENTIQUE (LECTURE AU CLIC SANS AUTOPLAY)
+       ========================================================================= -->
+  <section class="section" id="temoignage">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Parcours & Expérience</span>
+        <h2 class="section-title">Témoignage d'Eurielle Gomez, apprenante IFAM</h2>
+        <p class="section-desc">Découvrez le retour d'expérience sincère d'Eurielle Gomez sur sa formation pratique au sein des ateliers IFAM BÉNIN.</p>
+      </div>
+
+      <div class="video-showcase-container portrait">
+        <div class="video-player-wrapper portrait">
+          <video id="videoTemoignage"
+                 poster="../assets/images/poster-temoignage-eurielle.png"
+                 preload="metadata"
+                 aria-label="Témoignage d'Eurielle Gomez à IFAM BÉNIN">
+            <source src="../assets/videos/video-temoignage-eurielle.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo HTML5.
+          </video>
+          <div class="video-custom-overlay" id="videoOverlayTemoignage"
+               role="button" tabindex="0"
+               aria-label="Lancer la vidéo de témoignage d'Eurielle Gomez">
+            <div class="video-play-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+            <div class="video-overlay-text">Écouter le témoignage d'Eurielle</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       08. NOS OFFRES OFFICIELLES (BROCHURE IFAM)
+       ========================================================================= -->
+  <section class="section" id="offres">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tarifs & Formules officielles</span>
+        <h2 class="section-title">Offres de formation en Modélisme</h2>
+        <p class="section-desc">1 an de formation technique intensive en atelier. Choisissez la formule correspondant à votre niveau d'équipement.</p>
+      </div>
+
+      <div class="offres-grid">
+        <!-- OFFRE 1 -->
+        <article class="card-offre featured">
+          <div class="offre-badge-top">Équipement complet</div>
+          <span class="offre-name">OFFRE 1</span>
+          <div class="offre-price-tag">350 000 F CFA</div>
+
+          <ul class="offre-inclusions-list">
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Une machine à coudre</strong> incluse</span>
+            </li>
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Deux T-shirts IFAM</span>
+            </li>
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Accès aux cours de couture pour homme et dame</span>
+            </li>
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Accès aux cours de leadership et d'entrepreneuriat</span>
+            </li>
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Formation complète en Modélisme (1 an)</span>
+            </li>
+          </ul>
+
+          <div class="offre-footer">
+            <a href="https://wa.me/2290191553030?text=Bonjour%20IFAM%20B%C3%89NIN%2C%20je%20souhaite%20m%27inscrire%20en%20Mod%C3%A9lisme%20avec%20l%27Offre%201%20(%C3%A0%20350%20000%20F%20CFA)." 
+               class="btn btn-primary" style="width: 100%;" target="_blank" rel="noopener noreferrer"
+               aria-label="S'inscrire à l'Offre 1 Modélisme">
+              <span class="btn-text">Choisir l'Offre 1 (350 000 F)</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- OFFRE 2 -->
+        <article class="card-offre">
+          <span class="offre-name">OFFRE 2</span>
+          <div class="offre-price-tag">265 000 F CFA</div>
+
+          <ul class="offre-inclusions-list">
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>6 mètres de tissu inclus</span>
+            </li>
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Accès aux cours de couture pour homme et dame</span>
+            </li>
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Accès aux cours d'entrepreneuriat</span>
+            </li>
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Formation complète en Modélisme (1 an)</span>
+            </li>
+          </ul>
+
+          <div class="offre-footer">
+            <a href="https://wa.me/2290191553030?text=Bonjour%20IFAM%20B%C3%89NIN%2C%20je%20souhaite%20m%27inscrire%20en%20Mod%C3%A9lisme%20avec%20l%27Offre%202%20(%C3%A0%20265%20000%20F%20CFA)." 
+               class="btn btn-secondary" style="width: 100%;" target="_blank" rel="noopener noreferrer"
+               aria-label="S'inscrire à l'Offre 2 Modélisme">
+              <span class="btn-text">Choisir l'Offre 2 (265 000 F)</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- OFFRE 3 -->
+        <article class="card-offre">
+          <span class="offre-name">OFFRE 3</span>
+          <div class="offre-price-tag">215 000 F CFA</div>
+
+          <ul class="offre-inclusions-list">
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Formation complète en Modélisme (1 an)</span>
+            </li>
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Accès aux cours de couture pour homme et dame</span>
+            </li>
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Accès aux cours d'entrepreneuriat</span>
+            </li>
+            <li>
+              <svg class="offre-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Préparation complète à l'évaluation et à la soutenance officielle</span>
+            </li>
+          </ul>
+
+          <div class="offre-footer">
+            <a href="https://wa.me/2290191553030?text=Bonjour%20IFAM%20B%C3%89NIN%2C%20je%20souhaite%20m%27inscrire%20en%20Mod%C3%A9lisme%20avec%20l%27Offre%203%20(%C3%A0%20215%20000%20F%20CFA)." 
+               class="btn btn-outline" style="width: 100%;" target="_blank" rel="noopener noreferrer"
+               aria-label="S'inscrire à l'Offre 3 Modélisme">
+              <span class="btn-text">Choisir l'Offre 3 (215 000 F)</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       09. ORGANISER SA FORMATION (LES 8 CAMPUS IFAM)
+       ========================================================================= -->
+  <section class="section" id="centres" style="background-color: var(--ifam-blanc-creme);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Implantation locale</span>
+        <h2 class="section-title">Lieux et organisation pratique</h2>
+        <p class="section-desc">8 centres de formation au Bénin dispensant le même programme technique pour vous former dans les meilleures conditions.</p>
+      </div>
+
+      <div class="campus-layout">
+        <div class="campus-sidebar">
+          <h3 class="campus-sidebar-title">Repères de rentrée</h3>
+          <p style="margin-bottom: var(--space-4); font-size: 0.9375rem;">
+            <strong>Prochaine rentrée :</strong> 26 octobre 2026<br>
+            <strong>Durée :</strong> 1 an (12 mois de pratique intensive en atelier)<br>
+            <strong>Horaires :</strong> Des créneaux réguliers en journée sont assurés. Les horaires précis sont validés lors de votre entretien avec l'équipe du campus sélectionné.
+          </p>
+
+          <div style="margin-top: var(--space-5);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--ifam-fuchsia); margin-bottom: var(--space-2); font-weight: 700;">Nos 8 implantations :</div>
+            <div class="campus-tag-list">
+              <span class="campus-tag">Cotonou</span>
+              <span class="campus-tag">Calavi Site 1</span>
+              <span class="campus-tag">Calavi Site 2</span>
+              <span class="campus-tag">Porto-Novo</span>
+              <span class="campus-tag">Parakou</span>
+              <span class="campus-tag">Cococodji</span>
+              <span class="campus-tag">Bohicon</span>
+              <span class="campus-tag">Akpakpa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-group">
+          <!-- 1. Cotonou -->
+          <div class="accordion-item active">
+            <button class="accordion-trigger" aria-expanded="true">
+              <span>Cotonou (Agontikon)</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-panel">
+              <p><strong>Adresse exacte :</strong> En face de l'Université Pigier Bénin, Agontikon.</p>
+            </div>
+          </div>
+
+          <!-- 2. Abomey-Calavi Site 1 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>Abomey-Calavi (Site 1)</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-panel">
+              <p><strong>Adresse exacte :</strong> En face du campus Grand Portail, tout juste en haut du restaurant Charma Express.</p>
+            </div>
+          </div>
+
+          <!-- 3. Abomey-Calavi Site 2 -->
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>Abomey-Calavi (Site 2)</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-panel">
+              <p><strong>Adresse exacte :</strong> La von en face de la boutique « CHEZ MAMAN OLA » (von de l'Université Saint-Paul de Tarse).</p>
+            </div>
+          </div>
+
+          <!-- 4. Porto-Novo -->
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>Porto-Novo</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-panel">
+              <p><strong>Adresse exacte :</strong> AKONABOE, Rue de l'Hôpital El FATEH, 2ᵉ von à droite en allant vers la Place de l'Unité.</p>
+            </div>
+          </div>
+
+          <!-- 5. Parakou -->
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>Parakou</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-panel">
+              <p><strong>Adresse exacte :</strong> Au-dessus de l'immeuble CLCAM Banikanni (4ᵉ von après la pharmacie du campus en quittant le Campus).</p>
+            </div>
+          </div>
+
+          <!-- 6. Cococodji -->
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>Cococodji</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-panel">
+              <p><strong>Adresse exacte :</strong> En face de l'ancien marché, à côté de la pharmacie Le Magnifique.</p>
+            </div>
+          </div>
+
+          <!-- 7. Bohicon -->
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>Bohicon</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-panel">
+              <p><strong>Adresse exacte :</strong> À 100 m du carrefour de l'hôtel Dako, au-dessus de la microfinance MDB.</p>
+            </div>
+          </div>
+
+          <!-- 8. Akpakpa -->
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>Akpakpa</span>
+              <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-panel">
+              <p><strong>Adresse exacte :</strong> Lomnava, à 100 mètres dans la von en face de la station d'essence SBF.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. COMMENT COMMENCER ? (PARCOURS EN TROIS ÉTAPES)
+       ========================================================================= -->
+  <section class="section" id="inscription">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Inscription simple</span>
+        <h2 class="section-title">Votre parcours en 3 étapes simples</h2>
+        <p class="section-desc">Un accueil simple et humain, sans formalités compliquées en ligne.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <h3 class="step-title">Discuter avec une secrétaire sur WhatsApp</h3>
+          <p class="step-desc">Contactez une secrétaire IFAM BÉNIN pour poser vos questions, préciser vos disponibilités et choisir votre centre.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <h3 class="step-title">Choisir sa formation, son offre et son centre</h3>
+          <p class="step-desc">Nous validons avec vous la formule d'équipement (Offre 1, 2 ou 3), vos créneaux de cours et le centre le plus commode pour vous.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <h3 class="step-title">Compléter les formalités d’inscription</h3>
+          <p class="step-desc">Rendez-vous dans votre centre pour valider votre dossier administratif et démarrer les cours le 26 octobre 2026.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-8);">
+        <a href="https://wa.me/2290191553030?text=Bonjour%20IFAM%20B%C3%89NIN%2C%20je%20souhaite%20parler%20de%20mon%20projet%20pour%20la%20formation%20en%20Mod%C3%A9lisme." 
+           class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer"
+           aria-label="Discuter avec une secrétaire sur WhatsApp pour la formation Modélisme">
+          <span class="btn-text">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor;" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2M12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.04 3.67C16.58 3.67 20.28 7.37 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15M16.56 14.39C16.31 14.27 15.09 13.67 14.86 13.58C14.63 13.5 14.47 13.46 14.3 13.7C14.14 13.95 13.67 14.5 13.53 14.66C13.38 14.83 13.24 14.85 12.99 14.73C12.74 14.6 11.94 14.34 11 13.5C10.26 12.84 9.77 12.03 9.62 11.78C9.48 11.53 9.61 11.4 9.73 11.28C9.84 11.17 9.98 10.99 10.1 10.85C10.22 10.71 10.27 10.6 10.35 10.44C10.43 10.27 10.39 10.13 10.33 10.01C10.27 9.88 9.77 8.67 9.57 8.16C9.37 7.68 9.16 7.74 9.01 7.74C8.87 7.73 8.7 7.73 8.54 7.73C8.38 7.73 8.11 7.79 7.89 8.03C7.66 8.27 7.03 8.86 7.03 10.06C7.03 11.27 7.91 12.43 8.03 12.59C8.16 12.76 9.77 15.24 12.24 16.31C12.83 16.56 13.28 16.71 13.64 16.83C14.23 17.02 14.77 16.99 15.2 16.93C15.68 16.86 16.68 16.32 16.89 15.74C17.09 15.15 17.09 14.65 17.03 14.54C16.97 14.44 16.81 14.39 16.56 14.27Z"/></svg>
+            Discuter avec une secrétaire
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. QUESTIONS FRÉQUENTES & CONTACT FINAL
+       ========================================================================= -->
+  <section class="section" id="faq" style="background-color: var(--ifam-blanc-creme);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Transparence</span>
+        <h2 class="section-title">Questions fréquentes sur le Modélisme</h2>
+        <p class="section-desc">Des réponses concrètes pour vous orienter vers la filière technique.</p>
+      </div>
+
+      <div class="accordion-group">
+        <!-- Q1 -->
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Quelle est la différence entre le modélisme et le stylisme ?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Le styliste imagine le modèle et le dessine. Le modéliste est le technicien qui conçoit le patron à partir de ce dessin, calcule les mesures, découpe le tissu et monte le vêtement. Notre formation en Modélisme est concentrée sur cette maîtrise technique de coupe et d'assemblage.</p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>La formation est-elle accessible à ceux qui n'ont jamais cousu ?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Oui. Le programme débute par les fondamentaux : maniement des ciseaux, lecture du mètre ruban, tracé des patrons de base et prise en main de la machine à coudre. Vous progressez avec le soutien attentif de votre formateur.</p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Apprend-on la coupe Homme et Femme ?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Oui. La formation couvre les deux vestiaires (chemises, tuniques et pantalons pour homme ; corsages, jupes et robes structurées pour femme), ce qui garantit une grande polyvalence professionnelle.</p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Quelle est la valeur du diplôme ?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>À la fin de votre année d'études et après validation de votre soutenance pratique, vous recevez un diplôme reconnu par l’État attestant de vos compétences techniques de modéliste.</p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Faut-il apporter sa propre machine ?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Non. Les ateliers IFAM BÉNIN sont équipés pour vos séances de pratique. Si vous choisissez l'Offre 1, une machine neuve vous est attribuée pour vous entraîner chez vous. Pour les autres offres, la pratique a lieu dans les ateliers du centre.</p>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Quels sont les frais annexes à prévoir ?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>En complément des cours, prévoyez les frais d'inscription, le kit d'outils de coupe et de couture (règles de tailleur, ciseaux, canette, fil...), les manuels de formation, le cahier de mesures, l'uniforme officiel et les frais liés à la soutenance finale. Les montants exacts vous sont communiqués en toute clarté lors de votre entretien avec l'équipe.</p>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Comment se passe l'accueil des personnes déjà couturières ?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-panel">
+            <p>Si vous pratiquez déjà, nous organisons un entretien d'orientation préalable afin de déterminer précisément les techniques que vous souhaitez approfondir (perfectionnement du patronage, gradation, coupe masculine ou féminine).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARTE DE CONVERSION FINALE -->
+      <div class="cta-banner-card">
+        <div class="cta-banner-content">
+          <span class="cta-banner-badge">Rentrée le 26 octobre 2026</span>
+          <h3 class="cta-banner-title">Prêt(e) à maîtriser la coupe et la confection ?</h3>
+          <p class="cta-banner-desc">Échangez dès aujourd'hui avec une secrétaire IFAM BÉNIN sur WhatsApp pour préparer votre rentrée en Modélisme.</p>
+          <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+            <a href="https://wa.me/2290191553030?text=Bonjour%20IFAM%20B%C3%89NIN%2C%20je%20souhaite%20pr%C3%A9parer%20mon%20inscription%20en%20Mod%C3%A9lisme." 
+               class="btn btn-whatsapp btn-xl" target="_blank" rel="noopener noreferrer"
+               aria-label="Discuter avec une secrétaire sur WhatsApp pour la formation Modélisme">
+              <span class="btn-text">
+                <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:currentColor;" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2M12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.04 3.67C16.58 3.67 20.28 7.37 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15M16.56 14.39C16.31 14.27 15.09 13.67 14.86 13.58C14.63 13.5 14.47 13.46 14.3 13.7C14.14 13.95 13.67 14.5 13.53 14.66C13.38 14.83 13.24 14.85 12.99 14.73C12.74 14.6 11.94 14.34 11 13.5C10.26 12.84 9.77 12.03 9.62 11.78C9.48 11.53 9.61 11.4 9.73 11.28C9.84 11.17 9.98 10.99 10.1 10.85C10.22 10.71 10.27 10.6 10.35 10.44C10.43 10.27 10.39 10.13 10.33 10.01C10.27 9.88 9.77 8.67 9.57 8.16C9.37 7.68 9.16 7.74 9.01 7.74C8.87 7.73 8.7 7.73 8.54 7.73C8.38 7.73 8.11 7.79 7.89 8.03C7.66 8.27 7.03 8.86 7.03 10.06C7.03 11.27 7.91 12.43 8.03 12.59C8.16 12.76 9.77 15.24 12.24 16.31C12.83 16.56 13.28 16.71 13.64 16.83C14.23 17.02 14.77 16.99 15.2 16.93C15.68 16.86 16.68 16.32 16.89 15.74C17.09 15.15 17.09 14.65 17.03 14.54C16.97 14.44 16.81 14.39 16.56 14.27Z"/></svg>
+                Discuter avec une secrétaire
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER INSTITUTIONNEL ÉPURÉ
+       ========================================================================= -->
+  <footer class="footer-haut-de-gamme">
+    <div class="container">
+      <div class="footer-simple">
+        <div class="footer-logo-surface">
+          <img src="../assets/images/logo-ifam-officiel.jpg" alt="Logo officiel IFAM BÉNIN" class="footer-logo-img">
+        </div>
+        <div class="footer-slogan">« L’excellence au cœur de la formation »</div>
+        <p class="footer-desc">
+          Institut de référence au Bénin dédié à l'enseignement professionnalisant du modélisme, de la coupe technique et de la confection sur mesure.
+        </p>
+        <div class="footer-contact-actions">
+          <div class="footer-phone-display">+229 01 91 55 30 30</div>
+          <a href="https://wa.me/2290191553030?text=Bonjour%20IFAM%20B%C3%89NIN%2C%20je%20souhaite%20des%20informations%20sur%20la%20formation%20en%20Mod%C3%A9lisme." 
+             class="btn-whatsapp-pill" target="_blank" rel="noopener noreferrer" aria-label="Discuter avec une secrétaire sur WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2M12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.04 3.67C16.58 3.67 20.28 7.37 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15M16.56 14.39C16.31 14.27 15.09 13.67 14.86 13.58C14.63 13.5 14.47 13.46 14.3 13.7C14.14 13.95 13.67 14.5 13.53 14.66C13.38 14.83 13.24 14.85 12.99 14.73C12.74 14.6 11.94 14.34 11 13.5C10.26 12.84 9.77 12.03 9.62 11.78C9.48 11.53 9.61 11.4 9.73 11.28C9.84 11.17 9.98 10.99 10.1 10.85C10.22 10.71 10.27 10.6 10.35 10.44C10.43 10.27 10.39 10.13 10.33 10.01C10.27 9.88 9.77 8.67 9.57 8.16C9.37 7.68 9.16 7.74 9.01 7.74C8.87 7.73 8.7 7.73 8.54 7.73C8.38 7.73 8.11 7.79 7.89 8.03C7.66 8.27 7.03 8.86 7.03 10.06C7.03 11.27 7.91 12.43 8.03 12.59C8.16 12.76 9.77 15.24 12.24 16.31C12.83 16.56 13.28 16.71 13.64 16.83C14.23 17.02 14.77 16.99 15.2 16.93C15.68 16.86 16.68 16.32 16.89 15.74C17.09 15.15 17.09 14.65 17.03 14.54C16.97 14.44 16.81 14.39 16.56 14.27Z"/></svg>
+            Discuter avec une secrétaire
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 IFAM BÉNIN. Tous droits réservés. Institut de formation professionnelle agréé.</div>
+        <div>Rentrée officielle : 26 octobre 2026 · Inscriptions et informations : +229 01 91 55 30 30</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modale Sécurisée -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightboxClose" aria-label="Fermer la vue grand format">&times;</button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+</body>
+</html>

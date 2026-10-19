@@ -1,0 +1,5 @@
+.DS_Store
+**/.DS_Store
+*.zip
+server.rb
+_raw_assets_backup/
