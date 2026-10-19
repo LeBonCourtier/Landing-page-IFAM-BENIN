@@ -114,12 +114,24 @@
     }
 
     .portal-grand-desc {
-      font-size: clamp(1.18rem, 2.3vw, 1.45rem);
-      max-width: 860px;
-      margin: 0 auto var(--space-9);
+      font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+      max-width: 960px;
+      margin: 0 auto var(--space-8);
       color: var(--ifam-texte-secondaire);
-      line-height: 1.6;
+      line-height: 1.72;
       font-weight: 400;
+      text-wrap: balance;
+      text-wrap: pretty;
+    }
+
+    .portal-desc-break {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .portal-desc-break {
+        display: inline;
+      }
     }
 
     .portal-hero-actions {
@@ -395,7 +407,9 @@
       </h1>
 
       <p class="portal-grand-desc">
-        Rejoignez l'institut professionnel de référence au Bénin. Choisissez entre le Cursus Stylisme &amp; Modélisme (2 ans) et la Formation Modélisme (1 an) : ateliers d'élite équipés de machines individuelles, encadrement d'experts et diplôme d'État reconnu.
+        Rejoignez l'institut professionnel de référence au Bénin.<br class="portal-desc-break">
+        Choisissez entre le Cursus Stylisme &amp; Modélisme (2&nbsp;ans) et la Formation Modélisme (1&nbsp;an)&nbsp;:<br class="portal-desc-break">
+        ateliers d'élite équipés de machines individuelles, encadrement d'experts et diplôme d'État&nbsp;reconnu.
       </p>
 
       <!-- Boutons d'Action Principaux -->
