@@ -92,15 +92,16 @@
 
     /* Le grand slogan occupant toute la largeur de l'écran */
     .portal-grand-title {
-      font-size: clamp(3rem, 7.5vw, 5.8rem);
-      line-height: 1.06;
+      font-size: clamp(2.8rem, 6.8vw, 5.2rem);
+      line-height: 1.08;
       letter-spacing: -0.035em;
       margin-bottom: var(--space-6);
       color: var(--ifam-texte-principal);
       font-weight: 800;
-      max-width: 1100px;
+      max-width: 1040px;
       margin-left: auto;
       margin-right: auto;
+      text-wrap: balance;
     }
 
     .portal-grand-title .serif-italic {
@@ -131,28 +132,46 @@
     }
 
     .portal-trust-pills-light {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
       justify-content: center;
-      flex-wrap: wrap;
-      gap: var(--space-3);
-      max-width: 940px;
+      align-items: center;
+      gap: 0.85rem;
+      max-width: 1060px;
       margin: 0 auto;
       padding-top: var(--space-6);
       border-top: 1px solid var(--ifam-gris-bordure);
     }
 
+    @media (max-width: 1024px) {
+      .portal-trust-pills-light {
+        grid-template-columns: repeat(2, auto);
+        max-width: 580px;
+        gap: 0.75rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .portal-trust-pills-light {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+      }
+    }
+
     .portal-trust-pill-light {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
       background: #FFFFFF;
       border: 1px solid var(--ifam-gris-bordure);
       border-radius: var(--radius-full);
-      padding: 0.45rem 1.15rem;
+      padding: 0.5rem 1.15rem;
       font-size: 0.875rem;
       color: var(--ifam-texte-principal);
       font-weight: 500;
       box-shadow: var(--shadow-sm);
+      white-space: nowrap;
     }
 
     .portal-trust-pill-light svg {
@@ -371,8 +390,8 @@
 
       <!-- Slogan Géant occupant majestueusement l'écran -->
       <h1 class="portal-grand-title">
-        « L’excellence au cœur <br>
-        <span class="serif-italic">de la formation »</span>
+        L’excellence au cœur
+        <span class="serif-italic">de la formation</span>
       </h1>
 
       <p class="portal-grand-desc">
