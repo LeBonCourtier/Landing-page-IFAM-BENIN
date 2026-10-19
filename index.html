@@ -15,9 +15,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Space+Mono:wght@400;700&display=swap">
 
   <!-- Feuilles de style -->
-  <link rel="stylesheet" href="css/base.css?v=7">
-  <link rel="stylesheet" href="css/components.css?v=7">
-  <link rel="stylesheet" href="css/landing.css?v=7">
+  <link rel="stylesheet" href="css/base.css?v=8">
+  <link rel="stylesheet" href="css/components.css?v=8">
+  <link rel="stylesheet" href="css/landing.css?v=8">
 
   <style>
     /* ==========================================================================
@@ -27,8 +27,12 @@
     .portal-hero-grand {
       position: relative;
       background: #FFFFFF;
-      background: radial-gradient(ellipse at 50% 10%, rgba(228, 0, 124, 0.05) 0%, #FAFAF8 55%, #F4F4EE 100%);
-      padding: clamp(4.5rem, 9vw, 8rem) 0 clamp(4rem, 7vw, 6rem);
+      background: radial-gradient(ellipse at 50% 15%, rgba(228, 0, 124, 0.05) 0%, #FAFAF8 55%, #F4F4EE 100%);
+      padding: clamp(3.5rem, 7vh, 6.5rem) 0 clamp(3.5rem, 6vh, 5.5rem);
+      min-height: calc(86vh - 72px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       border-bottom: 1px solid var(--ifam-gris-bordure);
       overflow: hidden;
@@ -36,64 +40,16 @@
 
     .portal-hero-grand-content {
       max-width: 1140px;
+      width: 100%;
       margin: 0 auto;
       position: relative;
       z-index: 2;
     }
 
-    .portal-logo-surface {
-      background: #FFFFFF;
-      padding: 0.6rem 1.6rem;
-      border-radius: var(--radius-full);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-      border: 1px solid var(--ifam-gris-bordure);
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: var(--space-5);
-      text-decoration: none;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-    }
-
-    .portal-logo-surface:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    .portal-logo-surface img {
-      height: 48px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .portal-logo-surface span {
-      font-family: var(--font-mono);
-      font-size: 0.875rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--ifam-texte-principal);
-      text-transform: uppercase;
-    }
-
-    .portal-badge-date {
-      font-family: var(--font-mono);
-      font-size: clamp(0.8125rem, 1.2vw, 0.9375rem);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--ifam-fuchsia);
-      background: rgba(228, 0, 124, 0.08);
-      border: 1px solid rgba(228, 0, 124, 0.22);
-      padding: 0.5rem 1.4rem;
-      border-radius: var(--radius-full);
-      display: inline-block;
-      margin-bottom: var(--space-6);
-      font-weight: 700;
-    }
-
-    /* Le grand slogan occupant toute la largeur de l'écran */
+    /* Le grand slogan occupant majestueusement l'écran */
     .portal-grand-title {
-      font-size: clamp(2.4rem, 6.5vw, 5.2rem);
-      line-height: 1.08;
+      font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+      line-height: 1.06;
       letter-spacing: -0.035em;
       margin-bottom: var(--space-6);
       color: var(--ifam-texte-principal);
@@ -110,20 +66,37 @@
       font-weight: 600;
       color: var(--ifam-fuchsia);
       display: block;
-      margin-top: 0.25rem;
+      margin-top: 0.35rem;
     }
 
     @media (max-width: 768px) {
+      .portal-hero-grand {
+        min-height: auto;
+        padding: clamp(2.25rem, 6vw, 3.25rem) 0 clamp(2.5rem, 6vw, 3.5rem);
+      }
       .portal-grand-title {
-        font-size: clamp(1.9rem, 7.5vw, 2.75rem);
-        line-height: 1.15;
+        font-size: clamp(2rem, 7.5vw, 2.75rem);
+        line-height: 1.14;
+        margin-bottom: var(--space-4);
+      }
+      .portal-grand-desc {
+        font-size: 1rem;
+        line-height: 1.58;
+        margin-bottom: var(--space-6);
+      }
+      .portal-hero-actions {
+        margin-bottom: var(--space-6);
       }
     }
 
     @media (max-width: 440px) {
       .portal-grand-title {
-        font-size: clamp(1.6rem, 8vw, 2.15rem);
-        line-height: 1.16;
+        font-size: clamp(1.75rem, 8vw, 2.25rem);
+        line-height: 1.15;
+      }
+      .portal-grand-desc {
+        font-size: 0.9375rem;
+        line-height: 1.55;
       }
     }
 
@@ -145,10 +118,6 @@
     @media (max-width: 768px) {
       .portal-desc-break {
         display: inline;
-      }
-      .portal-grand-desc {
-        font-size: 1rem;
-        line-height: 1.55;
       }
     }
 
@@ -198,18 +167,25 @@
 
     @media (max-width: 560px) {
       .portal-trust-pills-light {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        max-width: 340px;
+        max-width: 390px;
         gap: 0.5rem;
+        padding-top: var(--space-5);
       }
       .portal-trust-pill-light {
         width: 100%;
         white-space: normal;
         text-align: center;
         justify-content: center;
-        font-size: 0.8125rem;
-        padding: 0.45rem 1rem;
+        font-size: 0.775rem;
+        padding: 0.45rem 0.4rem;
+        line-height: 1.25;
+        gap: 0.35rem;
+      }
+      .portal-trust-pill-light svg {
+        width: 13px;
+        height: 13px;
       }
     }
 
@@ -458,19 +434,6 @@
        ========================================================================= -->
   <main class="portal-hero-grand">
     <div class="container portal-hero-grand-content">
-      <!-- Badge Logo Institutionnel -->
-      <div>
-        <a href="index.html" class="portal-logo-surface">
-          <img src="assets/images/logo-ifam-officiel.jpg" alt="Logo IFAM BÉNIN">
-          <span>IFAM BÉNIN</span>
-        </a>
-      </div>
-
-      <!-- Pastille Rentrée Officielle -->
-      <div>
-        <span class="portal-badge-date">Institut d'Élite · Rentrée Officielle le 26 Octobre 2026</span>
-      </div>
-
       <!-- Slogan Géant occupant majestueusement l'écran -->
       <h1 class="portal-grand-title">
         L’excellence au cœur
