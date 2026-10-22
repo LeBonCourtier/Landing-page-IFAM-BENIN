@@ -916,45 +916,80 @@
    5. CARTE DE CONVERSION FINALE (PRE-FOOTER)
    -------------------------------------------------------------------------- */
 .cta-banner-card {
-  background: linear-gradient(135deg, var(--ifam-noir) 0%, #1A1A22 100%);
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: var(--ifam-texte-principal);
+  border: 1.5px solid var(--ifam-gris-bordure);
   border-radius: var(--radius-2xl);
-  padding: var(--space-10) var(--space-6);
+  padding: var(--space-8) var(--space-6);
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  margin-top: var(--space-12);
+  box-shadow: 0 12px 36px rgba(14, 14, 22, 0.05);
+  margin-top: var(--space-10);
 }
 
 .cta-banner-content {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
 .cta-banner-badge {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  color: var(--ifam-jaune-ruban);
+  color: var(--ifam-fuchsia);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
   display: inline-block;
+  font-weight: 700;
 }
 
 .cta-banner-title {
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
-  color: #FFFFFF;
-  margin-bottom: var(--space-4);
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  color: var(--ifam-texte-principal);
+  margin-bottom: var(--space-3);
   line-height: 1.2;
+  font-weight: 800;
   text-wrap: balance;
 }
 
 .cta-banner-desc {
-  font-size: 1.1rem;
-  color: var(--ifam-texte-inv-sec);
-  margin: 0 auto var(--space-6);
+  font-size: 1.05rem;
+  color: var(--ifam-texte-secondaire);
+  margin: 0 auto var(--space-5);
+  line-height: 1.6;
   text-wrap: pretty;
+}
+
+/* Bouton Carré avec 3 traits (Hamburger) pour Header */
+.header-burger-btn {
+  width: 44px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--ifam-gris-bordure);
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ifam-texte-principal);
+  box-shadow: 0 2px 8px rgba(14, 14, 22, 0.04);
+  transition: all 0.2s var(--ease-couture);
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.header-burger-btn:hover {
+  border-color: var(--ifam-fuchsia);
+  color: var(--ifam-fuchsia);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(228, 0, 124, 0.15);
+}
+
+.header-burger-btn svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
 }
 
 @media (max-width: 640px) {
