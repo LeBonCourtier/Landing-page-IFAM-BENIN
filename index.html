@@ -250,7 +250,35 @@
       font-weight: 800;
       color: var(--ifam-texte-principal);
       margin-bottom: var(--space-2);
-      line-height: 1.2;
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .cursus-filiere-tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+    }
+
+    .tag-filiere-1 {
+      background: rgba(228, 0, 124, 0.12);
+      color: var(--ifam-fuchsia);
+      border: 1px solid rgba(228, 0, 124, 0.25);
+    }
+
+    .tag-filiere-2 {
+      background: rgba(30, 58, 138, 0.12);
+      color: #1E3A8A;
+      border: 1px solid rgba(30, 58, 138, 0.25);
     }
 
     .cursus-card-desc {
@@ -335,7 +363,7 @@
       <!-- Message d'accueil et orientation statutaire sans durée et compact sur téléphone -->
       <p class="portal-grand-desc">
         Bienvenue au <strong>Centre privé de formation professionnelle et d'apprentissage IFAM BÉNIN</strong>.<br>
-        Choisissez votre filière d'excellence : <strong>Stylisme-Modélisme</strong> ou <strong>Modélisme</strong>.
+        Choisissez votre filière : <strong>Filière 1 (Stylisme-Modélisme)</strong> ou <strong>Filière 2 (Modélisme)</strong>.
       </p>
 
       <div class="portal-hero-actions">
@@ -395,9 +423,12 @@
           </div>
           <div class="cursus-card-body">
             <div>
-              <h3 class="cursus-card-title">Stylisme &amp; Modélisme</h3>
+              <h3 class="cursus-card-title">
+                <span>Stylisme &amp; Modélisme</span>
+                <span class="cursus-filiere-tag tag-filiere-1">Filière 1</span>
+              </h3>
               <p class="cursus-card-desc">
-                Dessin de figurines, patronage à plat, drapé sur mannequin et confection de collections d'apparat présentées en soutenance officielle.
+                Apprenez à imaginer, dessiner et coudre des tenues complètes de A à Z. Une formation complète pour devenir créateur de mode et lancer votre propre atelier ou marque.
               </p>
               <div class="cursus-card-meta">
                 <span>18 mois cours + 6 mois stage</span>
@@ -405,10 +436,10 @@
               </div>
             </div>
             <div style="margin-top: var(--space-2);">
-              <a href="https://wa.me/2290191553030?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20le%20cursus%20en%20Stylisme-Mod%C3%A9lisme%20(2%20ans)." 
+              <a href="https://wa.me/2290191553030?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20Fili%C3%A8re%201%20en%20Stylisme-Mod%C3%A9lisme%20(2%20ans)." 
                  class="btn btn-whatsapp btn-lg" style="width: 100%; justify-content: center;" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor;" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2M12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.04 3.67C16.58 3.67 20.28 7.37 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15M16.56 14.39C16.31 14.27 15.09 13.67 14.86 13.58C14.63 13.5 14.47 13.46 14.3 13.7C14.14 13.95 13.67 14.5 13.53 14.66C13.38 14.83 13.24 14.85 12.99 14.73C12.74 14.6 11.94 14.34 11 13.5C10.26 12.84 9.77 12.03 9.62 11.78C9.48 11.53 9.61 11.4 9.73 11.28C9.84 11.17 9.98 10.99 10.1 10.85C10.22 10.71 10.27 10.6 10.35 10.44C10.43 10.27 10.39 10.13 10.33 10.01C10.27 9.88 9.77 8.67 9.57 8.16C9.37 7.68 9.16 7.74 9.01 7.74C8.87 7.73 8.7 7.73 8.54 7.73C8.38 7.73 8.11 7.79 7.89 8.03C7.66 8.27 7.03 8.86 7.03 10.06C7.03 11.27 7.91 12.43 8.03 12.59C8.16 12.76 9.77 15.24 12.24 16.31C12.83 16.56 13.28 16.71 13.64 16.83C14.23 17.02 14.77 16.99 15.2 16.93C15.68 16.86 16.68 16.32 16.89 15.74C17.09 15.15 17.09 14.65 17.03 14.54C16.97 14.44 16.81 14.39 16.56 14.27Z"/></svg>
-                <span class="btn-text">Échanger sur WhatsApp (Stylisme)</span>
+                <span class="btn-text">Échanger sur WhatsApp (Filière 1)</span>
               </a>
             </div>
           </div>
@@ -422,9 +453,12 @@
           </div>
           <div class="cursus-card-body">
             <div>
-              <h3 class="cursus-card-title">Modélisme</h3>
+              <h3 class="cursus-card-title">
+                <span>Modélisme</span>
+                <span class="cursus-filiere-tag tag-filiere-2">Filière 2</span>
+              </h3>
               <p class="cursus-card-desc">
-                L'architecture exacte du vêtement : prise de mesures, tracé géométrique des gabarits, gradation et coupe de vestiaires Homme et Dame.
+                Apprenez à prendre les mesures exactes, couper les tissus avec précision et monter des vêtements impeccables (homme et dame). Idéal pour coudre vite et bien en atelier.
               </p>
               <div class="cursus-card-meta">
                 <span>1 an intensif</span>
@@ -432,10 +466,10 @@
               </div>
             </div>
             <div style="margin-top: var(--space-2);">
-              <a href="https://wa.me/2290191553030?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20formation%20en%20Mod%C3%A9lisme%20(1%20an)." 
+              <a href="https://wa.me/2290191553030?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20Fili%C3%A8re%202%20en%20Mod%C3%A9lisme%20(1%20an)." 
                  class="btn btn-whatsapp btn-lg" style="width: 100%; justify-content: center;" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor;" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2M12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.04 3.67C16.58 3.67 20.28 7.37 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15M16.56 14.39C16.31 14.27 15.09 13.67 14.86 13.58C14.63 13.5 14.47 13.46 14.3 13.7C14.14 13.95 13.67 14.5 13.53 14.66C13.38 14.83 13.24 14.85 12.99 14.73C12.74 14.6 11.94 14.34 11 13.5C10.26 12.84 9.77 12.03 9.62 11.78C9.48 11.53 9.61 11.4 9.73 11.28C9.84 11.17 9.98 10.99 10.1 10.85C10.22 10.71 10.27 10.6 10.35 10.44C10.43 10.27 10.39 10.13 10.33 10.01C10.27 9.88 9.77 8.67 9.57 8.16C9.37 7.68 9.16 7.74 9.01 7.74C8.87 7.73 8.7 7.73 8.54 7.73C8.38 7.73 8.11 7.79 7.89 8.03C7.66 8.27 7.03 8.86 7.03 10.06C7.03 11.27 7.91 12.43 8.03 12.59C8.16 12.76 9.77 15.24 12.24 16.31C12.83 16.56 13.28 16.71 13.64 16.83C14.23 17.02 14.77 16.99 15.2 16.93C15.68 16.86 16.68 16.32 16.89 15.74C17.09 15.15 17.09 14.65 17.03 14.54C16.97 14.44 16.81 14.39 16.56 14.27Z"/></svg>
-                <span class="btn-text">Échanger sur WhatsApp (Modélisme)</span>
+                <span class="btn-text">Échanger sur WhatsApp (Filière 2)</span>
               </a>
             </div>
           </div>
